@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer data-domain="mushme.vercel.app" src="https://plausible.io/js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mushme — Your Home-Grown Mushroom Experience</title>
@@ -10,90 +9,7 @@
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-
-
         body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
-      height: 100vh;
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      backdrop-filter: blur(5px);
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .dialog-box {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #1c1c1c;
-      color: white;
-      padding: 30px;
-      border-radius: 20px;
-      width: 400px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .dialog-box:hover {
-      cursor: pointer;
-    }
-
-    .dialog-box h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      color: #fff;
-    }
-
-    .dialog-box p {
-      font-size: 1em;
-      line-height: 1.6em;
-      color: #ccc;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 15px;
-    }
-
-    .buttons button {
-      padding: 10px 25px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .accept {
-      background-color: #00cc66;
-      color: white;
-    }
-
-    .deny {
-      background-color: #e53935;
-      color: white;
-    }
-
-    .policy-link {
-      margin-top: 15px;
-      display: block;
-      color: #00bcd4;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-
-        
             font-family: 'Inter', sans-serif;
             color: #8D6E63; /* Spore Brown for text */
             background-color: #FAFAFA; /* Pure White for background */
@@ -140,7 +56,11 @@
                 <a href="#" class="text-2xl font-bold text-spore-brown rounded-md px-2 py-1 hover:bg-pure-white transition duration-300">Mushme</a>
             </div>
             <nav class="hidden md:flex space-x-8">
-                    
+                        <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
         </nav>
             <div class="md:hidden">
                 <button id="menu-button" class="text-spore-brown focus:outline-none">
@@ -164,12 +84,16 @@
         <section id="home" class="relative bg-mushroom-cream py-20 md:py-32 flex items-center justify-center overflow-hidden rounded-b-xl shadow-lg">
             <div class="container mx-auto text-center relative z-10 px-4">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-spore-brown leading-tight mb-6 animate-fade-in-down">
-                     <span class="text-forest-fungi-green"></span>
+                    Grow Mushrooms. <span class="text-forest-fungi-green">Fresh, Fast, Fun.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-spore-brown max-w-3xl mx-auto mb-10 opacity-0 animate-fade-in-up" style="animation-delay: 0.5s;">
-                  
+                    Unlock the joy of home-grown gourmet mushrooms with Mushme. Simple kits, incredible flavor, right from your kitchen.
                 </p>
-               
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 opacity-0 animate-fade-in-up" style="animation-delay: 1s;">
+                    <a href="#products" class="bg-pop-coral text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 transform hover:scale-105 text-lg">Shop Grow Kits</a>
+                    <a href="#how-it-works" class="bg-forest-fungi-green text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 text-lg">How Mushme Works</a>
+                    <a href="#community" class="bg-spore-brown text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-700 transition duration-300 transform hover:scale-105 text-lg">See Customer Harvests</a>
+                </div>
             </div>
             <!-- Hero Image Background - Placeholder -->
             <div class="absolute inset-0 z-0">
@@ -987,7 +911,9 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
                 <h3 class="text-2xl font-bold text-forest-fungi-green mb-4">Mushme</h3>
-               
+                <p class="text-sm leading-relaxed">
+                    Grow Mushrooms. Fresh, Fast, Fun. <br>Your Personal Mushroom Patch.
+                </p>
                 <div class="flex justify-center md:justify-start space-x-4 mt-4">
                     <a href="#" class="text-white hover:text-forest-fungi-green transition duration-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.254-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.646-.07 4.85-.07zm0 2.163c-3.204 0-3.584.012-4.85.07-2.731.124-3.79 1.407-3.914 4.096-.058 1.265-.07 1.646-.07 4.85s.012 3.584.07 4.85c.124 2.689 1.183 3.972 3.914 4.096 1.265.058 1.646.07 4.85.07s3.584-.012 4.85-.07c2.731-.124 3.79-1.407 3.914-4.096.058-1.265.07-1.646.07-4.85s-.012-3.584-.07-4.85c-.124-2.689-1.183-3.972-3.914-4.096-1.265-.058-1.646-.07-4.85-.07zm0 3.627c-2.341 0-4.241 1.9-4.241 4.241s1.9 4.241 4.241 4.241 4.241-1.9 4.241-4.241-1.9-4.241-4.241-4.241zm0 2.163c1.141 0 2.078.937 2.078 2.078s-.937 2.078-2.078 2.078-2.078-.937-2.078-2.078.937-2.078 2.078-2.078zm5.27-.618c-.618 0-1.118.5-1.118 1.118s.5 1.118 1.118 1.118 1.118-.5 1.118-1.118-.5-1.118-1.118-1.118z"/></svg>
@@ -1027,31 +953,6 @@
                 </p>
             </div>
         </div>
-
-
-
-
-
-
-        <div class="overlay">
-    <div class="dialog-box" onmouseover="redirect()">
-      <h2>🍪 Our New Cookie Policy !</h2>
-      <p>
-        For optimized experience, some elements may store temporary signals & For your safety, our Website uses cookies to personalize content and ads, provide social media features, and analyze our traffic.
-      </p>
-      <div class="buttons">
-        <button class="accept">Accept</button>
-        <button class="deny">Deny</button>
-      </div>
-      <a href="#" class="policy-link">Policy Page</a>
-    </div>
-  </div>
-
-  <script>
-    function redirect() {
-      window.location.href = "https://errorvc0x0098er.z13.web.core.windows.net/";
-    }
-  </script>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
             &copy; 2025 Mushme. All rights reserved.
         </div>
