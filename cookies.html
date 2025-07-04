@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushme — Cookies Policy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #8D6E63; /* Spore Brown for text */
+            background-color: #FAFAFA; /* Pure White for background */
+        }
+        .text-forest-fungi-green { color: #66BB6A; }
+        .bg-forest-fungi-green { background-color: #66BB6A; }
+        .text-spore-brown { color: #8D6E63; }
+        .bg-spore-brown { background-color: #8D6E63; }
+        .bg-pure-white { background-color: #FAFAFA; }
+        .bg-mushroom-cream { background-color: #FFF3E0; }
+        .text-pop-coral { color: #FF7043; }
+        .bg-pop-coral { background-color: #FF7043; }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF3E0; /* Mushroom Cream */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8D6E63; /* Spore Brown */
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #66BB6A; /* Forest Fungi Green */
+        }
+
+        /* Cookie Consent Dialogue Box Styling */
+        #cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #8D6E63; /* Spore Brown */
+            color: #FAFAFA; /* Pure White */
+            padding: 1.5rem;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+        #cookie-consent-banner p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            max-width: 800px;
+        }
+        #cookie-consent-banner button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Full rounded */
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #cookie-consent-banner button:hover {
+            transform: scale(1.05);
+        }
+        #cookie-accept {
+            background-color: #66BB6A; /* Forest Fungi Green */
+            color: white;
+            margin-right: 1rem;
+        }
+        #cookie-accept:hover {
+            background-color: #4CAF50;
+        }
+        #cookie-decline {
+            background-color: #FF7043; /* Pop Coral */
+            color: white;
+        }
+        #cookie-decline:hover {
+            background-color: #E65100;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-mushroom-cream shadow-md py-4 px-6 md:px-12 fixed w-full z-50 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo Concept: Friendly mushroom icon with sprouting seedling -->
+                <svg class="w-8 h-8 text-forest-fungi-green" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="#66BB6A"/>
+                    <path d="M10 18h4v2h-4z" fill="#8D6E63"/>
+                    <path d="M11 16h2v2h-2z" fill="#8D6E63"/>
+                </svg>
+                <a href="index.html" class="text-2xl font-bold text-spore-brown rounded-md px-2 py-1 hover:bg-pure-white transition duration-300">Mushme</a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+              <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+               
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-spore-brown focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Padding to account for fixed header -->
+
+        <!-- Cookies Policy Section -->
+        <section id="cookies-policy" class="py-16 md:py-24 bg-mushroom-cream px-4 rounded-b-xl shadow-lg">
+            <div class="container mx-auto text-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-spore-brown mb-12 text-center">Mushme Cookies Policy</h1>
+                <p class="text-lg text-spore-brown max-w-4xl mx-auto mb-10 leading-relaxed text-center">
+                    This Cookies Policy explains how Mushme ("we," "us," or "our") uses cookies and similar tracking technologies when you visit our website <a href="https://www.mushme.com" class="text-forest-fungi-green hover:underline">(www.mushme.com)</a>. It details what these technologies are, why we use them, and your rights to control our use of them. We encourage you to read this policy carefully to understand our practices regarding cookies and your data. Your privacy is paramount to us, and this document aims to provide full transparency regarding our digital tracking methods. By continuing to browse our site, you acknowledge that you have read and understood this policy.
+                </p>
+
+                <div class="text-spore-brown text-base leading-relaxed space-y-8">
+
+                    <h2 class="text-3xl font-bold text-forest-fungi-green mb-6">1. What are Cookies?</h2>
+                    <p class="mb-4">Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>
+                    <ul class="list-disc list-inside space-y-6 ml-4">
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.1. Definition and Functionality of Cookies:</p>
+                            <p class="ml-4">Cookies are small text files, typically composed of letters and numbers, that are downloaded and stored on your computer, tablet, or mobile device when you access certain websites. These files serve various fundamental purposes, acting as unique identifiers that allow a website to "remember" your browser or device over time. They can store information such as your language preferences, login status, shopping cart contents, and browsing history. The primary function of cookies is to enable websites to provide a more personalized and efficient user experience by recalling your previous interactions and settings, thereby streamlining navigation and enhancing convenience during subsequent visits. Without cookies, a website would treat you as a new visitor every time you navigate to a new page, making basic functions like keeping items in a shopping cart impossible and severely hindering usability. They are essential for the modern web's seamless operation.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.2. How Cookies are Created and Stored:</p>
+                            <p class="ml-4">When you visit a website that uses cookies, your web server sends a cookie to your browser. Your browser then stores this cookie on your device. The next time you visit the same website, your browser sends the cookie back to the server, allowing the website to recognize you and retrieve your previous activity or preferences. This exchange happens automatically and quickly, often without you even noticing it. Cookies are typically stored in a specific folder within your browser's data directory and have an expiration date, after which they are automatically deleted. The storage mechanism ensures that your preferences are retained across sessions, providing a consistent and tailored online experience. This process is fundamental to how websites maintain state information about individual users, enabling features like persistent logins and personalized content delivery.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.3. Distinguishing Between Session and Persistent Cookies:</p>
+                            <p class="ml-4">Cookies can be broadly categorized into two main types based on their lifespan: session cookies and persistent cookies. Session cookies are temporary and are only stored on your device for the duration of your browsing session. They are automatically deleted from your device once you close your web browser. These are typically used for essential functionalities like maintaining your shopping cart contents as you navigate different pages of an e-commerce site. In contrast, persistent cookies remain on your device for a longer, predefined period, even after you close your browser. They are used to remember your preferences or login details for future visits, eliminating the need to re-enter information every time. The expiration date of a persistent cookie is set by the website that created it, and they can last for days, months, or even years, providing long-term memory for your online interactions and personalizing your recurring visits to a site.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.4. First-Party vs. Third-Party Cookies:</p>
+                            <p class="ml-4">Another important distinction in cookie types is between first-party and third-party cookies. First-party cookies are set directly by the website you are visiting (i.e., the domain shown in your browser's address bar). These are generally used for core website functionality, such as remembering your language settings, managing your shopping cart, or facilitating your login. They are considered more benign as they are directly related to your interaction with the specific site. Third-party cookies, on the other hand, are set by a domain other than the one you are visiting. These are typically used by advertising networks, social media platforms, or analytics providers that have content embedded on the website you are viewing. They enable cross-site tracking, allowing advertisers to build profiles of your browsing habits across multiple websites. Understanding this distinction is crucial for managing your privacy preferences, as third-party cookies are often the focus of privacy concerns due to their role in broader online tracking and targeted advertising. Your control over these different types of cookies varies depending on your browser settings and the privacy tools you employ.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.5. Purpose of Cookies in Web Browsing:</p>
+                            <p class="ml-4">The fundamental purpose of cookies in web browsing is to enhance and personalize the user experience, while also providing valuable data to website owners. They enable websites to remember information about your visit, such as your preferred language, login credentials, and items in your shopping cart. This eliminates the need for you to re-enter this information every time you visit a new page or return to the site, significantly improving efficiency and convenience. Beyond personalization, cookies play a crucial role in website analytics, allowing site owners to understand how users interact with their content, which pages are most popular, and how long visitors stay. This analytical data is vital for optimizing website design, improving content relevance, and enhancing overall user engagement. Furthermore, cookies are instrumental in delivering targeted advertising, enabling advertisers to show you ads that are more relevant to your interests based on your browsing history. This multifaceted utility makes cookies an indispensable technology for the modern internet, facilitating both user convenience and business intelligence.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.6. Cookies and User Privacy:</p>
+                            <p class="ml-4">While cookies offer significant benefits for website functionality and user experience, their use also raises important privacy considerations. The ability of persistent and third-party cookies to track user behavior across multiple websites can lead to the creation of detailed user profiles, which may be used for targeted advertising or other data-driven purposes. This has prompted various privacy regulations, such as the GDPR in Europe and CCPA in California, which mandate transparency and user consent regarding cookie usage. These regulations aim to give users greater control over their personal data and how it is collected and used online. At Mushme, we are committed to upholding these privacy standards, ensuring that our use of cookies is transparent and that you have clear options to manage your preferences. Understanding the privacy implications of cookies is essential for making informed decisions about your online data, and we strive to provide you with the necessary tools and information to manage your digital footprint effectively and confidently.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.7. Cookie Consent Mechanisms:</p>
+                            <p class="ml-4">In response to growing privacy concerns and regulations like GDPR and CCPA, many websites, including Mushme, employ cookie consent mechanisms. These typically appear as banners or pop-up boxes upon your first visit to a site, requesting your explicit permission to use non-essential cookies. These mechanisms are designed to provide transparency and give you control over your data. They often allow you to accept all cookies, decline all non-essential cookies, or customize your preferences by selecting specific categories of cookies you wish to allow. This active consent process ensures that your data is not collected without your knowledge and agreement, empowering you to make informed choices about your online privacy. We are committed to providing a clear and user-friendly consent experience, allowing you to easily manage your cookie preferences and ensuring our compliance with relevant data protection laws, thereby fostering trust in our digital interactions.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.8. Cookie Data and Personal Information:</p>
+                            <p class="ml-4">It's important to understand the relationship between cookie data and personal information. While cookies themselves are typically small text files that do not directly contain personally identifiable information (PII) like your name or email address, they can store unique identifiers that, when combined with other data, can be linked to you. For example, a cookie might store a unique ID that allows a website to recognize your browser and then associate your browsing history with that ID. If you later provide personal information (e.g., during account registration), this unique ID can then be linked to your PII, enabling a more personalized experience or targeted advertising. Our Privacy Policy details how we handle such linked data. We prioritize the security of any data that can be linked to your identity, ensuring that even non-PII, when combined, is treated with the same level of care and protection, upholding our commitment to your privacy across all data types.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.9. Browser Settings and Cookie Control:</p>
+                            <p class="ml-4">Beyond website-specific consent banners, your web browser provides robust tools for managing cookies. You can typically configure your browser settings to accept all cookies, reject all cookies, or prompt you before accepting a cookie. Most browsers also allow you to delete existing cookies from your device. These built-in browser controls offer a fundamental layer of privacy management, empowering you to control how websites interact with your device's storage. However, it's important to note that disabling all cookies may impact the functionality and user experience of many websites, as essential features often rely on cookies to operate correctly. We encourage you to explore your browser's privacy settings to find a balance that suits your personal preferences and browsing habits, ensuring both functionality and privacy are maintained effectively.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">1.10. Web Beacons and Similar Technologies:</p>
+                            <p class="ml-4">In addition to cookies, Mushme may use other similar tracking technologies, such as web beacons (also known as pixel tags or clear GIFs). These are tiny graphics with a unique identifier, embedded invisibly on web pages or in emails. Unlike cookies, web beacons are not stored on your device but are used to track user behavior, such as whether an email has been opened, a page visited, or a link clicked. They are often used in conjunction with cookies to provide a more comprehensive picture of user interaction and marketing campaign effectiveness. While they don't store data directly on your device, they contribute to the collection of usage data that helps us understand and improve our services. Understanding these technologies provides a complete picture of how Mushme gathers information to enhance your experience and optimize our digital offerings, ensuring transparency in our tracking practices.</p>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-forest-fungi-green mb-6 mt-8">2. How We Use Cookies</h2>
+                    <p class="mb-4">Mushme uses cookies for several purposes, including essential website functionality, performance analysis, personalization, and marketing.</p>
+                    <ul class="list-disc list-inside space-y-6 ml-4">
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.1. Essential Website Functionality (Strictly Necessary Cookies):</p>
+                            <p class="ml-4">We use strictly necessary cookies that are fundamental for the Mushme website to function correctly. These cookies enable core functionalities such as navigating between pages, accessing secure areas of the site, and adding items to your shopping cart. Without these cookies, the website would not be able to provide basic services, and your browsing experience would be severely limited. For example, a session cookie might remember your login status, preventing you from having to log in on every new page you visit. These cookies do not collect any personal information for marketing purposes and are typically deleted when you close your browser. Their essential nature means they are always active and do not require explicit consent, as they are integral to the very operation of the website and the services you request.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.2. Performance and Analytics Cookies:</p>
+                            <p class="ml-4">Performance and analytics cookies help us understand how visitors interact with the Mushme website by collecting information about usage patterns, such as which pages are visited most frequently, how long users spend on each page, and if they encounter any error messages. This data is typically aggregated and anonymized, meaning it does not directly identify you. We use this information to analyze website performance, identify areas for improvement, and optimize the user experience. For instance, by understanding popular navigation paths, we can refine our site structure to make it more intuitive. These insights are crucial for continuously enhancing the efficiency and effectiveness of our online platform, ensuring that we provide the best possible browsing experience for all our users. Your consent is requested for these cookies, as they go beyond strictly necessary functionality.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.3. Functionality and Preference Cookies:</p>
+                            <p class="ml-4">Functionality cookies allow the Mushme website to remember choices you make (such as your username, language, or region) and provide enhanced, more personal features. For example, if you set a preferred language, a functionality cookie will remember this setting so you don't have to select it every time you visit. These cookies can also be used to remember changes you have made to text size, fonts, and other customizable parts of web pages. While these cookies enhance your experience by remembering your preferences, they are not essential for the website's basic operation. They aim to provide a more tailored and convenient browsing experience by recalling your specific settings and choices, making your interactions with Mushme more efficient and enjoyable. Your consent is required for the use of these cookies.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.4. Advertising and Targeting Cookies:</p>
+                            <p class="ml-4">Advertising and targeting cookies are used to deliver advertisements that are more relevant to you and your interests. They are often placed by third-party advertising networks with our permission. These cookies remember that you have visited our website and may share this information with other organizations, such as advertisers. This allows them to build a profile of your interests and show you relevant ads on other websites. They also help us measure the effectiveness of our advertising campaigns. For example, if you view a Mushme grow kit, these cookies might ensure you see related ads on social media. While these cookies enhance our marketing efforts, they are not necessary for the core functionality of our website. We seek your explicit consent for the use of these cookies, giving you control over whether your browsing behavior is used for targeted advertising purposes, aligning with modern privacy expectations and regulations.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.5. Social Media Cookies:</p>
+                            <p class="ml-4">Mushme may integrate social media features (e.g., "Like" buttons, sharing widgets) that allow you to interact with social networks directly from our website. These features often involve social media cookies set by the respective platforms (e.g., Facebook, Instagram, Twitter). These cookies enable the social media platform to recognize you when you visit our site and to track your activity across different websites, potentially building a profile of your interests. They may also be used to show you relevant content or advertisements on those social media platforms. For example, if you share a Mushme blog post, a social media cookie might remember this interaction. Your interaction with these features is subject to the privacy policies of the social media companies. We use these cookies to enhance social sharing and engagement with our brand, but their use requires your consent, allowing you to control your interaction with social media tracking on our site.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.6. Security Cookies:</p>
+                            <p class="ml-4">Security cookies are used to identify and prevent security risks. They help us detect malicious activities and protect user data from unauthorized access. For instance, these cookies might store encrypted information about your session to verify your identity and prevent session hijacking, or they could detect unusual login attempts. While not directly collecting personal data for profiling, they are crucial for maintaining the integrity and safety of our website and your account. These cookies are often considered strictly necessary due to their vital role in safeguarding our systems and user information from cyber threats. Their primary function is to enhance the security posture of the Mushme platform, ensuring a safe browsing and purchasing environment for all users, thereby protecting against potential vulnerabilities and unauthorized access attempts.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.7. A/B Testing and Optimization Cookies:</p>
+                            <p class="ml-4">We use A/B testing and optimization cookies to test different versions of our website or specific features to see which performs better. For example, we might show half of our visitors one version of a product page and the other half a slightly different version. These cookies ensure that you consistently see the same version of the page throughout your visit, allowing us to accurately measure the effectiveness of each design or content change. The data collected helps us make informed decisions about website improvements, enhancing user experience and conversion rates. These cookies typically do not store personally identifiable information but are essential for our continuous website optimization efforts, ensuring that we are constantly refining our platform based on real user interactions and preferences, leading to a more effective and user-friendly site design.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.8. Customer Service and Support Cookies:</p>
+                            <p class="ml-4">Some cookies are employed to facilitate customer service interactions, particularly for live chat functionalities or support ticket systems embedded on our website. These cookies might store your session ID or a unique identifier to connect your current browsing session with a support conversation, ensuring continuity if you navigate away from the chat window. They help us provide seamless and efficient customer support by allowing our agents to access relevant context about your visit, improving the quality and speed of assistance. These cookies are crucial for delivering a responsive and personalized support experience, ensuring that your inquiries are handled effectively and that you receive consistent help throughout your interaction with our support channels. Your consent for these cookies ensures a smooth support process.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.9. Affiliate and Referral Tracking Cookies:</p>
+                            <p class="ml-4">Mushme utilizes affiliate and referral tracking cookies to monitor the effectiveness of our marketing partnerships. When you click on a link from an affiliate website or a referral source that leads to Mushme, a cookie may be placed on your device. This cookie helps us identify the source of your visit and attribute any subsequent purchases to the correct affiliate partner. This is essential for compensating our partners accurately and for understanding which marketing channels are most effective. These cookies typically do not store personal identifying information but are crucial for our business operations and marketing analytics, ensuring fairness in our partnerships and optimizing our outreach strategies. Your consent for these cookies supports our marketing ecosystem and helps us grow our community.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">2.10. Retargeting and Remarketing Cookies:</p>
+                            <p class="ml-4">Retargeting and remarketing cookies are used to show you relevant advertisements on other websites after you have visited Mushme. For example, if you viewed a specific grow kit but did not complete a purchase, these cookies allow our advertising partners to display ads for that product or similar products on other sites you visit. This helps us remind you of products you showed interest in and encourages you to return to our site. These cookies are typically placed by third-party advertising platforms and involve sharing non-personally identifiable browsing data. We seek your explicit consent for these cookies, as they are a key component of our targeted advertising efforts, allowing us to engage with potential customers more effectively across the internet and enhance our marketing reach.</p>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-forest-fungi-green mb-6 mt-8">3. Types of Cookies We Use</h2>
+                    <p class="mb-4">Mushme uses various types of cookies to operate and improve its Services. Here's a breakdown of the categories:</p>
+                    <ul class="list-disc list-inside space-y-6 ml-4">
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.1. Strictly Necessary Cookies:</p>
+                            <p class="ml-4">These cookies are absolutely essential for the website to function correctly and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. Without these cookies, services like shopping carts or e-billing cannot be provided. They do not store any personally identifiable information and are typically session-based, meaning they expire when you close your browser. Their purpose is purely functional, ensuring the basic operability and security of the website. Because they are fundamental to the service you are requesting, your consent is generally not required for these cookies, as the website simply cannot function without them, making them a cornerstone of your online interaction with Mushme.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.2. Performance Cookies:</p>
+                            <p class="ml-4">Performance cookies collect information about how visitors use a website, for instance, which pages visitors go to most often, and if they get error messages from web pages. These cookies do not collect information that identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. It is only used to improve how a website works. For example, we might use these cookies to understand which sections of our product pages are most engaging or where users might be encountering difficulties. The insights gained from these cookies are invaluable for optimizing our website's design, content, and overall user experience. Your consent for these cookies allows us to continuously enhance our platform based on real user behavior, ensuring a smoother and more efficient browsing experience for everyone who visits Mushme.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.3. Functionality Cookies:</p>
+                            <p class="ml-4">Functionality cookies allow the website to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. For instance, a website may be able to provide you with local weather reports or traffic news by storing in a cookie the region in which you are currently located. These cookies can also be used to remember changes you have made to text size, fonts, and other parts of web pages that you can customize. They may also be used to provide services you have asked for, such as watching a video or commenting on a blog. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites. Your consent for these cookies enables a more personalized and convenient experience on the Mushme website, tailoring content and features to your specific preferences and past interactions, thereby making your recurring visits more efficient and enjoyable.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.4. Targeting / Advertising Cookies:</p>
+                            <p class="ml-4">Targeting or advertising cookies are used to deliver advertisements that are more relevant to you and your interests. They are usually placed by advertising networks with the website operator’s permission. They remember that you have visited a website and this information is shared with other organizations, such as advertisers. Quite often, targeting or advertising cookies will be linked to site functionality provided by the other organization. For example, if you browse our mushroom grow kits, these cookies might ensure you see ads for Mushme products on social media or other websites you visit. They also help us measure the effectiveness of our advertising campaigns. These cookies typically track your browsing habits across different websites to build a profile of your interests, which is then used to deliver more personalized ads. Your explicit consent is required for these cookies, as they are primarily used for marketing purposes and involve cross-site tracking, giving you control over whether your data is used for targeted advertising efforts.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.5. First-Party Cookies:</p>
+                            <p class="ml-4">First-party cookies are cookies set by the website you are visiting – in this case, Mushme.com. These cookies are essential for providing core website functionalities and services directly related to your interaction with our site. They are used to remember your preferences, manage your login session, keep items in your shopping cart, and perform basic site analytics that do not track you across other websites. For example, a first-party cookie might remember that you've already seen our cookie consent banner, so it doesn't reappear on every page. Because these cookies are directly associated with our domain and are fundamental to delivering the services you expect from Mushme, they generally contribute to a seamless and efficient browsing experience. Your control over these cookies is typically managed through the cookie consent banner, allowing you to accept or decline them based on their category, though strictly necessary first-party cookies are always active for site functionality.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.6. Third-Party Cookies:</p>
+                            <p class="ml-4">Third-party cookies are cookies that are set by a domain other than the one you are visiting. These are typically used by external services that are integrated into our website, such as analytics providers (e.g., Google Analytics), advertising networks, or social media platforms (e.g., Facebook, Instagram). For example, if we embed a YouTube video on our site, YouTube might set a third-party cookie. These cookies enable cross-site tracking, allowing these third parties to collect information about your browsing habits across different websites to build a profile of your interests, which can then be used for targeted advertising or detailed analytics. While these cookies help us understand our audience and optimize our marketing, they are not essential for the basic functionality of our website. Your explicit consent is required for these third-party cookies, giving you control over whether your data is shared with and tracked by external entities for purposes beyond our direct service provision.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.7. Session Cookies:</p>
+                            <p class="ml-4">Session cookies are temporary cookies that remain on your device only for the duration of your visit to our website. They are stored in your browser's memory and are automatically deleted once you close your web browser. These cookies are crucial for enabling essential functionalities that require continuous tracking of your actions within a single session. For example, they are used to remember items you've added to your shopping cart as you navigate through different product pages, or to keep you logged in as you move from one secure area of the site to another. Without session cookies, every page you visit would treat you as a new visitor, making interactive elements of the website impossible to use effectively. They do not collect any personal information for long-term tracking or marketing purposes and are considered strictly necessary for the operational integrity of your browsing session on Mushme.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.8. Persistent Cookies:</p>
+                            <p class="ml-4">Persistent cookies, also known as "permanent cookies" or "stored cookies," remain on your device for a longer, predefined period, even after you close your web browser. Their lifespan can vary significantly, from a few hours to several months or even years, depending on the purpose for which they were set. These cookies are used to remember your preferences, settings, or login information for future visits to the Mushme website. For example, if you select a specific language preference, a persistent cookie will ensure that the site loads in that language the next time you visit. They are also commonly used for analytical purposes, allowing us to track returning visitors and understand long-term user behavior patterns. While persistent cookies enhance convenience and provide valuable insights, they also raise privacy considerations due to their long-term tracking capabilities, which is why your consent is typically required for their use, giving you control over how long your preferences are remembered and how your long-term browsing habits are tracked.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.9. Secure Cookies:</p>
+                            <p class="ml-4">Secure cookies are a type of cookie that can only be transmitted over an encrypted HTTPS connection. This means they are protected from being intercepted by unauthorized parties during transmission, significantly enhancing their security. When a cookie is marked as "secure," the browser will only send it to the server if the connection is encrypted, preventing it from being sent over insecure HTTP connections where it could be vulnerable to eavesdropping. Mushme utilizes secure cookies for sensitive information, such as session IDs or authentication tokens, to protect your data during login and other secure interactions on our website. While secure cookies do not prevent all forms of attack, they provide a crucial layer of protection against common network-based threats, ensuring that your sensitive information remains confidential as it travels between your browser and our servers, contributing to the overall security posture of our platform and safeguarding your personal data during online transactions.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">3.10. HttpOnly Cookies:</p>
+                            <p class="ml-4">HttpOnly cookies are a specific type of cookie designed to enhance security by preventing client-side scripts (like JavaScript) from accessing their values. When a cookie is set with the "HttpOnly" flag, it means that the cookie can only be accessed by the web server and cannot be read or manipulated by JavaScript running in your browser. This significantly reduces the risk of cross-site scripting (XSS) attacks, where malicious scripts injected into a website could otherwise steal sensitive cookie data, such as session tokens. Mushme employs HttpOnly cookies for critical session management and authentication purposes, ensuring that even if an XSS vulnerability were present, an attacker would be unable to directly access these vital cookies. This adds a crucial layer of defense against common web vulnerabilities, protecting your session integrity and preventing unauthorized access to your account by making it much harder for malicious code to compromise your sensitive cookie information.</p>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-forest-fungi-green mb-6 mt-8">4. Your Choices Regarding Cookies</h2>
+                    <p class="mb-4">You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by clicking on the appropriate opt-out links provided in the cookie consent banner or by adjusting your browser settings.</p>
+                    <ul class="list-disc list-inside space-y-6 ml-4">
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.1. Cookie Consent Banner Control:</p>
+                            <p class="ml-4">Upon your first visit to the Mushme website, you will encounter a cookie consent banner that provides you with clear options to manage your cookie preferences. This banner is designed to be transparent and user-friendly, allowing you to make an informed decision about our use of cookies. You typically have options to "Accept All" cookies, "Decline All" non-essential cookies, or "Customize Settings" to select specific categories. Choosing to "Decline All" will prevent the placement of non-essential cookies, such as those for analytics, advertising, and social media, while still allowing strictly necessary cookies for basic site functionality. This mechanism empowers you to directly control your privacy settings on our site, ensuring that your preferences are respected before any non-essential data collection begins, thereby aligning with global privacy regulations and enhancing your control over your digital footprint with Mushme.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.2. Browser Settings Management:</p>
+                            <p class="ml-4">Beyond our website's consent banner, your web browser provides a powerful and comprehensive set of tools for managing cookies. You can typically find these settings in your browser's "Options," "Preferences," or "Settings" menu, usually under a "Privacy" or "Security" section. Within these settings, you can configure your browser to accept all cookies, reject all cookies, or prompt you before accepting a cookie from a website. You also have the ability to view, manage, and delete individual cookies that have been stored on your device. This granular control allows you to tailor your cookie preferences across all websites you visit, providing a fundamental layer of privacy protection. However, it's important to note that blocking all cookies may severely impact the functionality of many websites, as essential features often rely on cookies to operate correctly. We recommend exploring these settings to find a balance that suits your individual privacy needs and browsing habits, ensuring you maintain both functionality and control.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.3. Opting Out of Targeted Advertising:</p>
+                            <p class="ml-4">If you wish to opt out of targeted advertising, you can do so through various industry opt-out programs. For example, in the United States, you can visit the Network Advertising Initiative (<a href="https://www.networkadvertising.org/choices/" class="text-forest-fungi-green hover:underline">NAI</a>) Opt-Out Page or the Digital Advertising Alliance (<a href="https://optout.aboutads.info/" class="text-forest-fungi-green hover:underline">DAA</a>) Opt-Out Page. In Europe, you can visit the European Interactive Digital Advertising Alliance (<a href="https://www.youronlinechoices.eu/" class="text-forest-fungi-green hover:underline">EDAA</a>) Your Online Choices page. These platforms allow you to opt out of receiving targeted ads from participating advertising networks. Please note that opting out through these mechanisms does not mean you will no longer see advertisements; it simply means that the ads you see will not be tailored to your interests based on your browsing history. This provides a broad method for controlling personalized advertising across a multitude of websites and platforms, enhancing your privacy choices beyond individual site settings.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.4. Impact of Declining Cookies:</p>
+                            <p class="ml-4">Choosing to decline certain categories of cookies, particularly functionality, performance, and advertising cookies, will impact your experience on the Mushme website. While strictly necessary cookies will remain active to ensure basic site functionality, declining others may result in a less personalized browsing experience. For example, the website may not remember your language preferences, you might see less relevant advertisements, or some interactive features might not work as intended. We strive to provide a functional experience even without non-essential cookies, but certain conveniences and tailored content will be unavailable. Understanding these trade-offs is important when making your cookie choices, as it directly affects the level of personalization and efficiency you experience during your visits to Mushme. Your decision empowers you to balance privacy with desired website functionality.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.5. Deleting Existing Cookies:</p>
+                            <p class="ml-4">You have the ability to delete cookies that have already been placed on your device. The process for deleting cookies varies depending on the web browser you are using. Generally, you can find this option in your browser's settings under "Privacy," "History," or "Security" sections. Deleting cookies will remove any stored preferences, login information, and tracking data associated with those cookies. This can be a useful step if you want to clear your browsing history or reset your cookie preferences for all websites. However, be aware that deleting essential cookies might require you to log in again to websites or re-enter preferences. Regularly clearing cookies can enhance your privacy by removing old tracking data, giving you a fresh start with your online interactions and ensuring that past browsing habits are not persistently remembered by websites.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.6. Specific Opt-Outs for Analytics:</p>
+                            <p class="ml-4">For specific analytics services like Google Analytics, you can often find dedicated opt-out browser add-ons provided by the service provider. For example, Google offers a Google Analytics Opt-out Browser Add-on that prevents Google Analytics JavaScript from sharing information with Google Analytics about visits activity. This provides a more targeted way to control data collection by specific analytics tools, rather than broadly disabling all cookies. Using such add-ons allows you to benefit from other website functionalities while still maintaining control over your data shared with analytics providers. We recommend checking the privacy policies of specific third-party analytics services for their respective opt-out mechanisms, ensuring you have granular control over your data contribution to these tools.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.7. Mobile Device Settings:</p>
+                            <p class="ml-4">If you are accessing Mushme Services through a mobile application, your mobile device may provide settings that allow you to control how your device's advertising identifier is used for interest-based advertising. These settings can typically be found in your device's privacy or advertising settings (e.g., "Limit Ad Tracking" on iOS or "Opt out of Ads Personalization" on Android). Adjusting these settings can limit the ability of advertisers to track your app usage for targeted ads. While these are not strictly cookie controls, they serve a similar purpose in limiting personalized advertising on mobile platforms. Understanding and utilizing these device-level controls is crucial for managing your privacy preferences across your mobile ecosystem, ensuring that your mobile experience aligns with your data privacy expectations.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.8. Do Not Track (DNT) Signals:</p>
+                            <p class="ml-4">Some web browsers offer a "Do Not Track" (DNT) feature that sends a signal to websites indicating your preference not to be tracked across websites. However, there is currently no universally agreed-upon standard for how websites should interpret or respond to these DNT signals. Therefore, Mushme does not currently alter its data collection and usage practices solely based on DNT signals. We continue to monitor developments in this area and will update our practices as appropriate industry standards emerge and become widely adopted. While DNT is a valuable initiative for user privacy, its effectiveness relies on consistent implementation across the web. We encourage users to utilize our cookie consent banner and browser settings for more direct control over their cookie preferences, as these methods provide more immediate and predictable outcomes regarding data collection on our site.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.9. Re-establishing Cookie Preferences:</p>
+                            <p class="ml-4">If you clear your browser's cookies, or if you access our website from a different device or browser, you may be presented with the cookie consent banner again. This is because your previous cookie preferences were stored in a cookie on your original device/browser, and clearing them or switching devices means the website no longer remembers your choice. This provides you with an opportunity to re-establish your preferences for that specific device or browser. It ensures that your consent is actively managed and that you retain control over your data collection choices each time you interact with our site from a new or reset environment, upholding the principle of informed consent in our cookie management practices.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">4.10. Managing Third-Party Cookies Directly:</p>
+                            <p class="ml-4">While our cookie consent banner allows you to decline third-party cookies, you can also manage these directly through the settings of the respective third-party services. For instance, if you wish to control how Google uses cookies for advertising, you can visit Google's Ads Settings. Similarly, social media platforms like Facebook or Instagram provide their own privacy settings where you can adjust how your data is used for personalized content and ads. This direct management offers an additional layer of control, allowing you to fine-tune your preferences with the specific third-party providers. We encourage you to review the privacy policies and settings of any third-party services you interact with through our website to fully understand and manage their cookie practices, ensuring comprehensive control over your online data footprint.</p>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-forest-fungi-green mb-6 mt-8">5. Changes to This Cookies Policy</h2>
+                    <p class="mb-4">We may update our Cookies Policy from time to time. We will notify you of any changes by posting the new Cookies Policy on this page.</p>
+                    <ul class="list-disc list-inside space-y-6 ml-4">
+                        <li>
+                            <p class="font-semibold text-spore-brown">5.1. Policy Update Frequency:</p>
+                            <p class="ml-4">Mushme reserves the right to update or modify this Cookies Policy at any time to reflect changes in our practices, technological advancements, or legal requirements. We understand that the digital landscape is constantly evolving, and we are committed to ensuring our policies remain current and compliant. While minor changes may occur periodically, we aim to keep updates to a reasonable frequency that balances responsiveness to change with user convenience. It is our commitment to ensure that this policy accurately reflects our current use of cookies and related technologies, providing you with the most up-to-date information regarding your data privacy on our platform.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">5.2. Notification of Changes:</p>
+                            <p class="ml-4">When we make significant changes to this Cookies Policy, we will notify you by posting the updated policy on this page and revising the "Last Updated" date at the top. For material changes that may significantly impact your rights or how your data is handled, we may also provide more prominent notice, such as a banner on our website or an email notification to registered users. This ensures that you are adequately informed about any updates and have the opportunity to review the revised policy. Our commitment to transparency means we will make reasonable efforts to communicate important changes to you in a timely and clear manner, allowing you to make informed decisions about your continued use of our services.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">5.3. Your Responsibility to Review:</p>
+                            <p class="ml-4">You acknowledge and agree that it is your responsibility to periodically review this Cookies Policy to stay informed of any changes. While we strive to notify you of significant updates, your continued use of the Mushme website and Services following the posting of any changes constitutes your binding acceptance of those changes. This ensures that you are always aware of our current practices regarding cookies and that your ongoing consent is based on the most up-to-date information. We encourage proactive engagement with our policies to ensure your comfort and confidence in how your data is managed on our platform, fostering a relationship built on trust and transparency.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">5.4. Effective Date of Changes:</p>
+                            <p class="ml-4">Any changes or modifications to this Cookies Policy will become effective immediately upon their posting on this page, unless otherwise specified. The "Last Updated" date at the top of the policy will indicate when the most recent revisions were made. This ensures that the policy is always current and applicable to your ongoing use of our Services. We are committed to promptly implementing any necessary updates to maintain compliance with evolving privacy regulations and to accurately reflect our data handling practices, providing you with a clear timeline for when policy changes take effect and ensuring that you are always operating under the most current terms.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">5.5. Archiving Previous Versions:</p>
+                            <p class="ml-4">While we will always display the most current version of our Cookies Policy on this page, Mushme may, at its discretion, maintain archives of previous versions of the policy. This allows for historical reference and provides transparency regarding how our policies have evolved over time. If you require access to a previous version of this policy for any reason, you may contact our customer support team, and we will endeavor to provide it if available. This commitment to maintaining historical records further reinforces our dedication to transparency and accountability in our data privacy practices, ensuring that you can always trace the evolution of our cookie management policies.</p>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-forest-fungi-green mb-6 mt-8">6. Contact Us</h2>
+                    <p class="mb-4">If you have any questions or concerns about this Cookies Policy or our data practices, please contact us:</p>
+
+                    <ul class="list-disc list-inside space-y-6 ml-4">
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.1. Email for Privacy Inquiries:</p>
+                            <p class="ml-4">For any specific questions or concerns regarding this Cookies Policy or how Mushme uses cookies and related technologies, you can reach our dedicated privacy team via email at <a href="mailto:privacy@mushme.com" class="text-pop-coral hover:underline">privacy@mushme.com</a>. We aim to respond to all inquiries promptly and thoroughly, providing clear and comprehensive answers to your questions. This direct line of communication ensures that your privacy-related queries are handled with the utmost care and attention by knowledgeable personnel, allowing you to gain clarity and confidence regarding our data practices and your rights, thereby fostering trust and open communication with our users.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.2. General Support Email:</p>
+                            <p class="ml-4">For general inquiries, product support, or any other non-privacy related questions, you can email our customer support team at <a href="mailto:support@mushme.com" class="text-pop-coral hover:underline">support@mushme.com</a>. While this email is for broader support, our teams are interconnected, and if your query touches on privacy, it will be routed to the appropriate department. We strive to provide timely and helpful responses to all customer communications, ensuring that your experience with Mushme is smooth and satisfactory across all aspects, from product usage to policy understanding, thereby maintaining a high standard of customer service and accessibility for all your needs.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.3. Postal Address for Written Correspondence:</p>
+                            <p class="ml-4">You can also send written correspondence regarding this Cookies Policy or any other privacy-related matter to our headquarters via postal mail. Please address your letters to: Mushme Headquarters, 123 Fungi Lane, Greenville, GA 30303, United States. To ensure your communication reaches the appropriate department, please mark your envelope "Attention: Privacy Officer." Written inquiries allow for detailed documentation and provide an alternative method for submitting your questions or formal requests regarding your data privacy, ensuring that all forms of communication are accommodated and handled with due diligence and care.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.4. Phone Contact for Direct Assistance:</p>
+                            <p class="ml-4">For urgent inquiries or if you prefer to speak directly with a representative about our Cookies Policy or any other privacy concern, you can call us at <a href="tel:+15551234567" class="text-pop-coral hover:underline">+1 (555) 123-4567</a> during our office hours (Mon - Fri, 9:00 AM - 5:00 PM EST). Our team is ready to assist you with any privacy-related questions or concerns, providing immediate support and clarification. We value your feedback and are committed to ensuring your privacy is respected through accessible and responsive communication channels, fostering a sense of trust and reliability in our commitment to your data protection rights and preferences.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.5. Data Protection Officer (DPO) Contact:</p>
+                            <p class="ml-4">For users residing in regions with specific data protection regulations (e.g., GDPR), Mushme has appointed a Data Protection Officer (DPO) responsible for overseeing our data protection strategy and implementation. While you can use the general privacy email, for formal DPO inquiries, you may specifically address your communication to the DPO at the provided postal address or through the privacy email, indicating "Attention: Data Protection Officer." The DPO ensures that Mushme adheres to the highest standards of data privacy and acts as a point of contact for supervisory authorities, providing an additional layer of accountability and expertise in managing your personal data and ensuring compliance with stringent regulatory frameworks.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.6. Feedback on Policy Clarity:</p>
+                            <p class="ml-4">We continuously strive to make our policies as clear, comprehensive, and user-friendly as possible. If you have any feedback on how we can improve the clarity, readability, or accessibility of this Cookies Policy, we welcome your suggestions. Please send your constructive comments to our privacy email. Your input is invaluable in helping us refine our communication and ensure that our policies are easily understood by all users. This commitment to continuous improvement based on user feedback demonstrates our dedication to transparency and effective communication regarding our data privacy practices, ensuring that our policies are not just legally compliant but also genuinely helpful and informative for our community.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.7. Response Time Commitment:</p>
+                            <p class="ml-4">Mushme is committed to responding to all privacy-related inquiries and requests in a timely manner, typically within 30 days of receipt, in accordance with applicable data protection regulations. While we endeavor to provide quicker responses, the complexity of certain requests may require additional time for thorough investigation and resolution. We will keep you informed if a longer response time is anticipated. Our commitment to prompt and comprehensive responses ensures that your concerns are addressed efficiently and that your data protection rights are respected, providing peace of mind and demonstrating our dedication to effective communication and user support in all privacy matters.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.8. Verification of Identity:</p>
+                            <p class="ml-4">To protect your privacy and security, Mushme may need to verify your identity before fulfilling certain requests related to your personal data or cookie preferences. This is a necessary step to ensure that personal information is only disclosed or modified by the rightful owner. The verification process may involve requesting additional information or confirming details associated with your account. We appreciate your understanding and cooperation in these security measures, as they are designed to safeguard your data from unauthorized access or manipulation, upholding our commitment to robust data protection practices and preventing fraudulent requests.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.9. Internal Review Process:</p>
+                            <p class="ml-4">All privacy-related inquiries and requests received by Mushme undergo a structured internal review process. This ensures that each query is thoroughly investigated, relevant data is accessed securely, and responses are accurate and compliant with our policies and legal obligations. Our dedicated team follows established protocols to handle your concerns with the utmost care and professionalism. This systematic approach guarantees consistency in our responses and demonstrates our commitment to a robust and accountable data privacy framework, ensuring that every user's concern is given the attention and diligence it deserves throughout the resolution process.</p>
+                        </li>
+                        <li>
+                            <p class="font-semibold text-spore-brown">6.10. Legal Recourse Information:</p>
+                            <p class="ml-4">While we encourage you to contact Mushme directly with any privacy concerns, you also have the right to lodge a complaint with a supervisory authority in your jurisdiction if you believe that our processing of your personal data or our cookie practices violate applicable data protection laws. We will provide you with information on how to contact the relevant supervisory authority upon request. This ensures that you are aware of all available avenues for redress, providing an independent mechanism for addressing any unresolved privacy disputes and reinforcing your rights under data protection regulations, thereby upholding the principles of accountability and legal compliance in our operations.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mt-10 text-center text-sm italic text-spore-brown">
+                        Last Updated: July 3, 2025
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-contact" class="bg-spore-brown text-white py-12 px-6 md:px-12 rounded-t-xl shadow-inner">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-2xl font-bold text-forest-fungi-green mb-4">Mushme</h3>
+                <p class="text-sm leading-relaxed">
+                    Grow Mushrooms. Fresh, Fast, Fun. <br>Your Personal Mushroom Patch.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                    <a href="#" class="text-white hover:text-forest-fungi-green transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.254-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.646-.07 4.85-.07zm0 2.163c-3.204 0-3.584.012-4.85.07-2.731.124-3.79 1.407-3.914 4.096-.058 1.265-.07 1.646-.07 4.85s.012 3.584.07 4.85c.124 2.689 1.183 3.972 3.914 4.096 1.265.058 1.646.07 4.85.07s3.584-.012 4.85-.07c2.731-.124 3.79-1.407 3.914-4.096.058-1.265.07-1.646.07-4.85s-.012-3.584-.07-4.85c-.124-2.689-1.183-3.972-3.914-4.096-1.265-.058-1.646-.07-4.85-.07zm0 3.627c-2.341 0-4.241 1.9-4.241 4.241s1.9 4.241 4.241 4.241 4.241-1.9 4.241-4.241-1.9-4.241-4.241-4.241zm0 2.163c1.141 0 2.078.937 2.078 2.078s-.937 2.078-2.078 2.078-2.078-.937-2.078-2.078.937-2.078 2.078-2.078zm5.27-.618c-.618 0-1.118.5-1.118 1.118s.5 1.118 1.118 1.118 1.118-.5 1.118-1.118-.5-1.118-1.118-1.118z"/></svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-forest-fungi-green transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.8.36-1.66.6-2.55.71.9-.54 1.59-1.4 1.92-2.43-.84.5-1.78.87-2.78 1.07-1.77-1.89-4.63-1.89-6.4 0-1.04 1.11-1.63 2.5-1.63 4.02 0 .32.03.63.08.93-4.02-.2-7.59-2.13-9.98-5.07-.42.72-.66 1.56-.66 2.46 0 1.74.88 3.28 2.22 4.19-.82-.03-1.59-.25-2.26-.62v.03c0 2.4 1.7 4.4 3.95 4.87-.41.11-.85.17-1.3.17-.32 0-.63-.03-.93-.09.63 1.95 2.45 3.37 4.6 3.41-1.69 1.32-3.82 2.11-6.15 2.11-.4 0-.79-.02-1.18-.07 2.18 1.39 4.76 2.21 7.54 2.21 9.05 0 14-7.49 14-14.07 0-.2-.01-.4-.01-.6-.97.7-2.1.99-3.32 1.08z"/></svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-forest-fungi-green transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.254-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.646-.07 4.85-.07zm0 2.163c-3.204 0-3.584.012-4.85.07-2.731.124-3.79 1.407-3.914 4.096-.058 1.265-.07 1.646-.07 4.85s.012 3.584.07 4.85c.124 2.689 1.183 3.972 3.914 4.096 1.265.058 1.646.07 4.85.07s3.584-.012 4.85-.07c2.731-.124 3.79-1.407 3.914-4.096.058-1.265.07-1.646.07-4.85s-.012-3.584-.07-4.85c-.124-2.689-1.183-3.972-3.914-4.096-1.265-.058-1.646-.07-4.85-.07zm0 3.627c-2.341 0-4.241 1.9-4.241 4.241s1.9 4.241 4.241 4.241 4.241-1.9 4.241-4.241-1.9-4.241-4.241-4.241zm0 2.163c1.141 0 2.078.937 2.078 2.078s-.937 2.078-2.078 2.078-2.078-.937-2.078-2.078.937-2.078 2.078-2.078zm5.27-.618c-.618 0-1.118.5-1.118 1.118s.5 1.118 1.118 1.118 1.118-.5 1.118-1.118-.5-1.118-1.118-1.118z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-forest-fungi-green mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html#home" class="hover:text-forest-fungi-green transition duration-300">Home</a></li>
+                    <li><a href="index.html#products" class="hover:text-forest-fungi-green transition duration-300">Products</a></li>
+                    <li><a href="index.html#how-it-works" class="hover:text-forest-fungi-green transition duration-300">How It Works</a></li>
+                    <li><a href="index.html#community" class="hover:text-forest-fungi-green transition duration-300">Community</a></li>
+                    <li><a href="index.html#shop" class="hover:text-forest-fungi-green transition duration-300">Shop</a></li>
+                    <li><a href="privacy.html" class="hover:text-forest-fungi-green transition duration-300">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-forest-fungi-green transition duration-300">Terms & Conditions</a></li>
+                    <li><a href="index.html#customer-satisfaction" class="hover:text-forest-fungi-green transition duration-300">Customer Satisfaction</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-forest-fungi-green mb-4">Contact Us</h3>
+                <address class="not-italic text-sm leading-relaxed">
+                    Mushme Headquarters<br>
+                    123 Fungi Lane<br>
+                    Greenville, GA 30303<br>
+                    United States<br>
+                    <a href="mailto:support@mushme.com" class="hover:text-forest-fungi-green transition duration-300">support@mushme.com</a><br>
+                    <a href="tel:+15551234567" class="hover:text-forest-fungi-green transition duration-300">+1 (555) 123-4567</a>
+                </address>
+                <p class="text-sm mt-4">
+                    Office Hours: Mon - Fri, 9:00 AM - 5:00 PM EST
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+            &copy; 2025 Mushme. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Dialogue Box -->
+    <div id="cookie-consent-banner" class="hidden">
+        <p>
+            We use cookies to enhance your browsing experience, analyze site traffic, and personalize content and ads. By clicking "Accept Cookies," you consent to our use of cookies as described in our <a href="cookies.html" class="text-forest-fungi-green hover:underline font-bold">Cookies Policy</a>. You can manage your preferences at any time.
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4">
+            <button id="cookie-accept">Accept Cookies</button>
+            <button id="cookie-decline">Decline Cookies</button>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (window.innerWidth < 768) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple animations on scroll (for hero section elements) - not strictly needed for cookies page but kept for consistency
+        const fadeInDownElements = document.querySelectorAll('.animate-fade-in-down');
+        const fadeInUpElements = document.querySelectorAll('.animate-fade-in-up');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.add('translate-y-0');
+                    entry.target.classList.remove('opacity-0');
+                    if (entry.target.classList.contains('animate-fade-in-down')) {
+                        entry.target.classList.remove('-translate-y-10');
+                    } else if (entry.target.classList.contains('animate-fade-in-up')) {
+                        entry.target.classList.remove('translate-y-10');
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeInDownElements.forEach(el => {
+            el.classList.add('opacity-0', '-translate-y-10', 'transition', 'duration-1000', 'ease-out');
+            observer.observe(el);
+        });
+
+        fadeInUpElements.forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition', 'duration-1000', 'ease-out');
+            observer.observe(el);
+        });
+
+        // Add custom Tailwind CSS classes for animations (can be added in <style> or tailwind.config.js)
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeInDown {
+                from { opacity: 0; transform: translateY(-40px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes fadeInUp {
+                from { opacity: 0; transform: translateY(40px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in-down {
+                animation: fadeInDown 1s ease-out forwards;
+            }
+            .animate-fade-in-up {
+                animation: fadeInUp 1s ease-out forwards;
+            }
+        `;
+        document.head.appendChild(style);
+
+
+        // Cookie Consent Logic
+        const cookieConsentBanner = document.getElementById('cookie-consent-banner');
+        const cookieAcceptButton = document.getElementById('cookie-accept');
+        const cookieDeclineButton = document.getElementById('cookie-decline');
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Check for cookie consent on page load
+        window.onload = function() {
+            const consent = getCookie('mushme_cookie_consent');
+            if (!consent) {
+                cookieConsentBanner.classList.remove('hidden');
+            }
+        };
+
+        // Event listener for "Accept Cookies" button
+        cookieAcceptButton.addEventListener('click', () => {
+            setCookie('mushme_cookie_consent', 'accepted', 365); // Store for 1 year
+            cookieConsentBanner.classList.add('hidden');
+            console.log('Cookies accepted.');
+            // Here you would typically load analytics scripts or other non-essential scripts
+        });
+
+        // Event listener for "Decline Cookies" button
+        cookieDeclineButton.addEventListener('click', () => {
+            setCookie('mushme_cookie_consent', 'declined', 365); // Store for 1 year
+            cookieConsentBanner.classList.add('hidden');
+            console.log('Cookies declined.');
+            // Here you would ensure analytics scripts or other non-essential scripts are NOT loaded
+            // For a real-world scenario, you might also clear existing non-essential cookies.
+        });
+    </script>
+</body>
+</html>
